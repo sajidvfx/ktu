@@ -43,6 +43,16 @@ s0.parentNode.insertBefore(s1,s0);
             <h1></h1>
             <p></p>
                 <img src="https://i0.wp.com/www.theinspiringjournal.com/wp-content/uploads/2020/11/21-motivational-quotes-about-life.jpg" alt="">
+                <div id="motivational-quote"></div>
+<script>
+  function getRandomQuoteImage() {
+    var url = "https://picsum.photos/200/300";
+    document.getElementById("motivational-quote").innerHTML = '<img src="' + url + '" alt="Motivational Quote">';
+  }
+  getRandomQuoteImage();
+  setInterval(getRandomQuoteImage, 10000); // Updates the image every 10 seconds
+</script>
+
             </center>
         </div>
         <footer>
