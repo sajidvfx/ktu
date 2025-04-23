@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEB - Hands-Free Dictation Assistant Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
+        }
+        .card {
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .feature-icon {
+            background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        th {
+            background-color: #f1f5f9;
+            font-weight: 600;
+        }
+        tr:hover {
+            background-color: #f8fafc;
+        }
+        .header-logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .website-showcase {
+            border: 2px dashed #cbd5e1;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <!-- Header -->
+    <header class="bg-white shadow">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h1 class="header-logo">Text To Ear and Brain (TEB)</h1>
+                    <p class="text-gray-600 text-sm">Submitted by: SAJ Team</p>
+                </div>
+                <div class="text-right">
+                    <h2 class="text-lg font-semibold">Micro Project Report</h2>
+                    <p class="text-gray-600">Institution: XYZInstitute</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Title Section -->
+        <div class="mb-10 text-center">
+            <h1 class="text-3xl md:text-4xl font-bold mb-2">Hands-Free Dictation Assistant</h1>
+            <div class="w-24 h-1 gradient-bg mx-auto mb-4"></div>
+        </div>
+
+        <!-- Executive Summary -->
+        <section class="mb-12 bg-white card p-6">
+            <h2 class="text-2xl font-bold mb-4 pb-2 border-b border-gray-200">Executive Summary</h2>
+            <p class="text-gray-700 leading-relaxed">
+                This project proposes a <span class="font-semibold">hands-free dictation web application</span> that transforms the way students, researchers, writers, and visually impaired users interact with digital content. Instead of reading from a screen, users can upload or paste text which is read aloud in well-paced, repeatable chunks. The app is designed to enhance productivity, accessibility, and focus by supporting customizable text-to-speech playback, intelligent pauses, and user-friendly interaction features.
+            </p>
+        </section>
+
+        <!-- Product Description -->
+        <section class="mb-12 bg-white card p-6">
+            <h2 class="text-2xl font-bold mb-4 pb-2 border-b border-gray-200">Product Description</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <h3 class="text-xl font-semibold mb-3">Key Features</h3>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                        <li>Upload PDFs or paste custom text</li>
+                        <li>Hear content spoken aloud using TTS</li>
+                        <li>Experience automatic segmentation of text (~25–28 characters per chunk)</li>
+                        <li>Hear each chunk repeated twice with controllable pauses</li>
+                        <li>Control speech rate, voice gender/accent, and interval timing</li>
+                        <li>Update profile photo and username via a user-friendly settings interface</li>
+                        <li>Save playback preferences with a single "Apply" button</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-3">Technologies Used</h3>
+                    <div class="space-y-2 text-gray-700">
+                        <p><span class="font-medium">Frontend:</span> React + Tailwind CSS</p>
+                        <p><span class="font-medium">Backend:</span> Supabase (Authentication, Database, Storage)</p>
+                        <p><span class="font-medium">Speech Engine:</span> Web Speech API</p>
+                        <p><span class="font-medium">Deployment:</span> GitHub Pages / Vercel</p>
+                        <p><span class="font-medium">Mobile APK:</span> Built using Android WebView wrapper</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Market-Sector Packaging -->
+        <section class="mb-12 bg-white card p-6">
+            <h2 class="text-2xl font-bold mb-4 pb-2 border-b border-gray-200">Market-Sector Packaging</h2>
+            <p class="text-gray-700 mb-4">The product targets:</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-indigo-50 p-4 rounded-lg">
+                    <div class="flex items-center mb-3">
+                        <span class="feature-icon mr-3">
+                            <i class="fas fa-graduation-cap"></i>
+                        </span>
+                        <h3 class="font-semibold">Students & Researchers</h3>
+                    </div>
+                    <p class="text-sm text-gray-600">For improved note-taking and retention</p>
+                </div>
+                <div class="bg-indigo-50 p-4 rounded-lg">
+                    <div class="flex items-center mb-3">
+                        <span class="feature-icon mr-3">
+                            <i class="fas fa-pen-fancy"></i>
+                        </span>
+                        <h3 class="font-semibold">Writers</h3>
+                    </div>
+                    <p class="text-sm text-gray-600">For auditory feedback and proofreading</p>
+                </div>
+                <div class="bg-indigo-50 p-4 rounded-lg">
+                    <div class="flex items-center mb-3">
+                        <span class="feature-icon mr-3">
+                            <i class="fas fa-universal-access"></i>
+                        </span>
+                        <h3 class="font-semibold">Visually Impaired</h3>
+                    </div>
+                    <p class="text-sm text-gray-600">For accessible content consumption</p>
+                </div>
+                <div class="bg-indigo-50 p-4 rounded-lg">
+                    <div class="flex items-center mb-3">
+                        <span class="feature-icon mr-3">
+                            <i class="fas fa-tasks"></i>
+                        </span>
+                        <h3 class="font-semibold">Productivity-Focused</h3>
+                    </div>
+                    <p class="text-sm text-gray-600">For hands-free multitasking workflows</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Development Timeline -->
+        <section class="mb-12 bg-white card p-6">
+            <h2 class="text-2xl font-bold mb-4 pb-2 border-b border-gray-200">Development Timeline</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full">
+                    <thead>
+                        <tr>
+                            <th class="w-1/6">Week</th>
+                            <th>Task Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Text upload, parsing, and TTS integration</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>User settings interface and customization</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Supabase auth & session persistence fixes</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Profile editing feature (image + name)</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Responsive UI + Mobile APK via WebView</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Product Features Overview -->
+        <section class="mb-12 bg-white card p-6">
+            <h2 class="text-2xl font-bold mb-4 pb-2 border-b border-gray-200">Product Features Overview</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="flex items-start">
+                    <div class="text-indigo-500 mr-3 mt-1 text-xl">✨</div>
+                    <div>
+                        <h3 class="font-semibold">Chunked Text Segmentation</h3>
+                        <p class="text-gray-600">For better pacing and comprehension</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="text-indigo-500 mr-3 mt-1 text-xl">🎧</div>
+                    <div>
+                        <h3 class="font-semibold">Smart Speech Repetition</h3>
+                        <p class="text-gray-600">With word-spacing logic for retention</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="text-indigo-500 mr-3 mt-1 text-xl">🧠</div>
+                    <div>
+                        <h3 class="font-semibold">Custom Pause Increment</h3>
+                        <p class="text-gray-600">Between repetitions for user preference</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="text-indigo-500 mr-3 mt-1 text-xl">🔊</div>
+                    <div>
+                        <h3 class="font-semibold">Voice Selection</h3>
+                        <p class="text-gray-600">Male/female voices with accent options</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="text-indigo-500 mr-3 mt-1 text-xl">👤</div>
+                    <div>
+                        <h3 class="font-semibold">Profile Management</h3>
+                        <p class="text-gray-600">User authentication via Supabase</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="text-indigo-500 mr-3 mt-1 text-xl">🎛️</div>
+                    <div>
+                        <h3 class="font-semibold">Dynamic Apply Button</h3>
+                        <p class="text-gray-600">For real-time preference updates</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="text-indigo-500 mr-3 mt-1 text-xl">📱</div>
+                    <div>
+                        <h3 class="font-semibold">Responsive Design</h3>
+                        <p class="text-gray-600">Mobile compatibility and APK availability</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expense Chart -->
+        <section class="mb-12 bg-white card p-6">
+            <h2 class="text-2xl font-bold mb-4 pb-2 border-b border-gray-200">Expense Chart (Estimated)</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th class="w-1/3">Estimated Cost (INR)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Domain & Hosting (1 Year)</td>
+                            <td>₹2,000</td>
+                        </tr>
+                        <tr>
+                            <td>Supabase Subscription (Optional)</td>
+                            <td>₹4,000</td>
+                        </tr>
+                        <tr>
+                            <td>UI Design & Assets</td>
+                            <td>₹1,000</td>
+                        </tr>
+                        <tr>
+                            <td>Icon Packs / Fonts Licensing</td>
+                            <td>₹500</td>
+                        </tr>
+                        <tr>
+                            <td>Play Store Developer Account</td>
+                            <td>₹2,300</td>
+                        </tr>
+                        <tr>
+                            <td>Internet & Testing Tools</td>
+                            <td>₹1,200</td>
+                        </tr>
+                        <tr>
+                            <td>Miscellaneous (Backup, Docs)</td>
+                            <td>₹1,000</td>
+                        </tr>
+                        <tr class="bg-indigo-50 font-semibold">
+                            <td>Total</td>
+                            <td>₹12,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Market & Differentiation -->
+        <section class="mb-12 bg-white card p-6">
+            <h2 class="text-2xl font-bold mb-4 pb-2 border-b border-gray-200">Market & Differentiation</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-3">Competitors</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-center">
+                            <span class="text-indigo-500 mr-2">•</span>
+                            Google Text-to-Speech
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-indigo-500 mr-2">•</span>
+                            Speechify
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-indigo-500 mr-2">•</span>
+                            Voice Dream Reader
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-3">Unique Selling Points</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-center">
+                            <span class="text-indigo-500 mr-2">•</span>
+                            Custom chunk size and repeat logic
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-indigo-500 mr-2">•</span>
+                            Adjustable pause timing per repetition
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-indigo-500 mr-2">•</span>
+                            Personalized voice & user preference storage
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-indigo-500 mr-2">•</span>
+                            Clean, focused UI for accessibility and minimalism
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sales & Outreach Strategy -->
+        <section class="mb-12 bg-white card p-6">
+            <h2 class="text-2xl font-bold mb-4 pb-2 border-b border-gray-200">Sales & Outreach Strategy</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-indigo-50 p-5 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-3">Institutional Outreach</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-indigo-500 mr-2 mt-1">→</span>
+                            <span>Collaborations with educational institutions</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-indigo-500 mr-2 mt-1">→</span>
+                            <span>Promotion via student forums and accessibility networks</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-indigo-50 p-5 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-3">Community Building</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-indigo-500 mr-2 mt-1">→</span>
+                            <span>Word-of-mouth marketing among researchers & writers</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-indigo-500 mr-2 mt-1">→</span>
+                            <span>Free version with optional premium upgrades for offline/audio download</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Website Showcase -->
+        <section class="mb-12 bg-white card p-6">
+            <h2 class="text-2xl font-bold mb-4 pb-2 border-b border-gray-200">Website Showcase</h2>
+            <div class="website-showcase p-4 mb-4">
+                <div class="text-center mb-4">
+                    <i class="fas fa-image text-5xl text-gray-400"></i>
+                    <p class="text-gray-500 mt-2">Place your website screenshot here</p>
+                </div>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg text-center">
+                <h3 class="font-semibold mb-2">Website Link</h3>
+                <div class="flex items-center justify-center">
+                    <i class="fas fa-link text-indigo-500 mr-2"></i>
+                    <span class="text-gray-700">[Add your website URL here]</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="mb-12 bg-white card p-6">
+            <h2 class="text-2xl font-bold mb-4 pb-2 border-b border-gray-200">Conclusion</h2>
+            <p class="text-gray-700 leading-relaxed">
+                This project demonstrates how audio-first interfaces can transform the digital experience for a diverse range of users. With low-cost infrastructure, creative UX, and real-life use cases, our hands-free dictation tool serves as a practical and empowering platform for everyday productivity and inclusive education.
+            </p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-xl font-bold mb-2">Text To Ear and Brain (TEB)</h3>
+                    <p class="text-sm">Transforming text consumption through audio innovation</p>
+                </div>
+                <div class="text-center md:text-right">
+                    <p class="mb-2">Submitted by: SAJ Team</p>
+                    <p class="text-sm">© 2025 Text To Ear and Brain. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
